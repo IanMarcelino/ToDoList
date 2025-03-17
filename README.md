@@ -1,6 +1,6 @@
 # To Do List 
 
-Projeto desenvolvido em Flutter consumindo.
+Projeto desenvolvido em Flutter.
 
 ## Getting Started
 
