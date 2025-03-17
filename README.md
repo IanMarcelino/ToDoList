@@ -1,6 +1,6 @@
-# todolist
+# To Do List 
 
-A new Flutter project.
+Projeto desenvolvido em Flutter consumindo.
 
 ## Getting Started
 
