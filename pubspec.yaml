@@ -37,6 +37,7 @@ dependencies:
   freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
   lucid_validation: ^1.2.5
+  result_dart: ^2.0.0
 
 dev_dependencies:
   flutter_test:
