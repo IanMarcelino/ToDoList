@@ -1,13 +1,11 @@
 class TodoDTO {
   int id;
   String title;
-  String description;
-  bool status;
+  bool completed;
   
   TodoDTO({
     this.id = 0,
     this.title = '',
-    this.description = '',
-    this.status = false,
+    this.completed = false,
   });
 }
