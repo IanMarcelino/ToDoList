@@ -6,7 +6,6 @@ import 'package:todolist/domain/dtos/todo_DTO.dart';
 import 'package:todolist/domain/entities/todo_entity.dart';
 
 class RemoteTodoRepository implements TodoRepository {
-
   final ClientHttpTodo _client;
   final _streamController = StreamController<Todo>.broadcast();
 
@@ -36,10 +35,9 @@ class RemoteTodoRepository implements TodoRepository {
   AsyncResult<Todo> updateTodo(int id, TodoDTO todoDTO) {
     return _client.updateTodo(id, todoDTO);
   }
-  
+
   @override
   void dispose() {
-    _streamController.close(); 
+    _streamController.close();
   }
- 
 }
