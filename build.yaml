@@ -1,0 +1,10 @@
+targets: 
+  $default:
+      sources:
+        include:
+          - lib/domain/** 
+        exclude:
+          - lib/**.freezed.dart
+          - lib/**.g.dart
+
+## para buildar apenas na pasta lib-domain e excluir os .g 
