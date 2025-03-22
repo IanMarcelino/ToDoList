@@ -28,7 +28,7 @@ class ClientHttpTodo{
   }
 
   AsyncResult<Todo> updateTodo(int id, TodoDTO todoDTO) async {
-    final result = await _clientHttp.put('$_baseUrl/$id', todoDTO.toJson());
+    final result = await _clientHttp.patch('$_baseUrl/$id', todoDTO.toJson());
 
     return result.map((response) {
       final data = response.data;
