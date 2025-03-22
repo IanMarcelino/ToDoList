@@ -8,4 +8,12 @@ class TodoDTO {
     this.title = '',
     this.completed = false,
   });
+
+    Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'completed': completed,
+    };
+}
 }

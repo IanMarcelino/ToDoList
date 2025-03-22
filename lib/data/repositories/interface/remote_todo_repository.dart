@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:result_dart/src/types.dart';
 import 'package:result_dart/src/unit.dart';
 import 'package:todolist/data/repositories/interface/todo_repository.dart';
@@ -5,9 +7,12 @@ import 'package:todolist/domain/dtos/TodoDTO.dart';
 import 'package:todolist/domain/entities/todo_entity.dart';
 
 class RemoteTodoRepository implements TodoRepository {
+
+  final _streamController = StreamController<Todo>.broadcast();
+
   @override
   AsyncResult<Todo> addTodo(TodoDTO todoDTO) {
-    // TODO: implement addTodo
+    
     throw UnimplementedError();
   }
 
@@ -35,5 +40,9 @@ class RemoteTodoRepository implements TodoRepository {
     throw UnimplementedError();
   }
   
+  @override
+  void dispose() {
+    _streamController.close(); 
+  }
  
 }
