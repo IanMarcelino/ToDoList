@@ -1,43 +1,40 @@
 import 'dart:async';
-
-import 'package:result_dart/src/types.dart';
-import 'package:result_dart/src/unit.dart';
+import 'package:result_dart/result_dart.dart';
 import 'package:todolist/data/repositories/interface/todo_repository.dart';
-import 'package:todolist/domain/dtos/TodoDTO.dart';
+import 'package:todolist/data/service/client/client_http_todo.dart';
+import 'package:todolist/domain/dtos/todo_DTO.dart';
 import 'package:todolist/domain/entities/todo_entity.dart';
 
 class RemoteTodoRepository implements TodoRepository {
 
+  final ClientHttpTodo _client;
   final _streamController = StreamController<Todo>.broadcast();
+
+  RemoteTodoRepository(this._client);
 
   @override
   AsyncResult<Todo> addTodo(TodoDTO todoDTO) {
-    
-    throw UnimplementedError();
+    return _client.addTodo(todoDTO);
   }
 
   @override
   AsyncResult<Todo> completedTodo(int id) {
-    // TODO: implement completedTodo
-    throw UnimplementedError();
+    return _client.completedTodo(id);
   }
 
   @override
   AsyncResult<Unit> deleteTodo(int id) {
-    // TODO: implement deleteTodo
-    throw UnimplementedError();
+    return _client.deleteTodo(id);
   }
 
   @override
   AsyncResult<List<Todo>> getAllTodos() {
-    // TODO: implement getAllTodos
-    throw UnimplementedError();
+    return _client.getAllTodos();
   }
 
   @override
   AsyncResult<Todo> updateTodo(int id, TodoDTO todoDTO) {
-    // TODO: implement updateTodo
-    throw UnimplementedError();
+    return _client.updateTodo(id, todoDTO);
   }
   
   @override

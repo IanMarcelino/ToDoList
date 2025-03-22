@@ -1,5 +1,5 @@
 import 'package:lucid_validation/lucid_validation.dart';
-import 'package:todolist/domain/dtos/TodoDTO.dart';
+import 'package:todolist/domain/dtos/todo_DTO.dart';
 
 class TaskValidator extends LucidValidator<TodoDTO> {
   TaskValidator() {
