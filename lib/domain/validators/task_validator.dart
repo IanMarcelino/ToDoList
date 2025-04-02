@@ -7,5 +7,4 @@ class TaskValidator extends LucidValidator<TodoDTO> {
     .notEmpty()
     .minLength(3);
   }
-
 }

@@ -8,7 +8,7 @@ sealed class Todo with _$Todo {
   const factory Todo({
     required int id,
     required String title,
-    required bool completed,
+    required bool status,
   }) = _Todo;
 
   factory Todo.fromJson(Map<String, dynamic> json) => _$TodoFromJson(json);
