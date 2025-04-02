@@ -8,4 +8,6 @@ abstract interface class TodoRepository {
   AsyncResult<Todo>updateTodo(int id, TodoDTO todoDTO);
   AsyncResult<Unit>deleteTodo(int id);   
   AsyncResult<Todo>completedTodo(int id); 
-}
+  
+  void dispose();
+  }
