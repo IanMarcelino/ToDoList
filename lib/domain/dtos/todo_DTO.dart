@@ -1,12 +1,13 @@
 class TodoDTO {
   int id;
   String title;
-  bool completed;
+  bool status;
+
   
   TodoDTO({
     this.id = 0,
     this.title = '',
-    this.completed = false,
+    this.status = false,
   });
 
     Map<String, dynamic> toJson() {
